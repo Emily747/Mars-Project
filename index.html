@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mars-a-palooza!</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="jumbotron text-center">
+    <h1>Mission to Mars</h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+    </div>
+    <br>
+    <h2>Mars News</h2>
+    <h3>{{mars_db.News_Title}}</h3>
+    <p>{{mars_db.News_p}}</p>
+    <h2>Featured Image</h2>
+
+    <div class="well text-center">
+      <div class="col-md-12"></div>
+      <div class="row">
+          <div class="col-md-6">
+              <img src="{{mars_db.JPL_featured_img}}" class="img-responsive fit-img" alt="Featured Image">
+          </div>
+      </div>
+</div>
+<br>
+<br>
+
+    <h2>Current Weather on Mars</h2>
+    <p>{{mars_db.mars_weather}}</p>
+
+      <h2>Mars Facts</h2>
+      {{mars_db.mars_facts|safe}}
+
+<br>
+<br>
+
+<div class="container">
+  <div class="well text-center">
+      <h2>Mars Hemispheres</h2>
+          <div class="row">
+              <div class="col-md-6">
+                  <img src="{{mars_db.Cerberus}}" class="img-responsive fit-img" alt="Mars Photo">
+              </div>
+              <div class="col-md-6">
+                  <img src="{{mars_db.Schiaparelli}}" class="img-responsive fit-img" alt="Mars Photo">
+              </div>
+          </div>
+      </div>
+      <div class="well text-center">
+              <div class="col-md-12"></div>
+              <div class="row">
+                  <div class="col-md-6">
+                      <img src="{{mars_db.Syrtis}}" class="img-responsive fit-img" alt="Mars Photo">
+                  </div>
+                  <div class="col-md-6">
+                      <img src="{{mars_db.Valles}}" class="img-responsive fit-img" alt="Mars Photo">
+                  </div>
+              </div>
+       </div>
+      </body>
+</body>
